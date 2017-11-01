@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+      .entry{
+          -webkit-padding-start: 30px;
+      }
+      .entry li {
+          line-height: 29px;
+          margin-left: -10px;
+      }
+      .entry li div{
+          margin-right: 10px;
+          padding-left: 8px;
+          padding-top: 8px;
+          padding-bottom: 8px;
+          background: #222222;
+          color: white;
+          word-break: break-all;
+          -ms-word-wrap: break-word;
+          word-wrap: break-word;
+          line-height: 15px;
+          font-size: 10pt;
+      }
+      .entry li button{
+          margin-top: 5px;
+          height: 35px;
+          color: #111111;
+      }
+
+    </style>
+</head>
+
+<body>
+<div class="blog-header">
+    <h3>Java Interface 可用接口列表测试</h3>
+</div>
+
+
+<script>
+    function callHello(){
+        AndroidNative.hello();
+    }
+
+    function callHello1(){
+        AndroidNative.hello('hello Android');
+    }
+
+    function callAndroid(){
+        var temp = AndroidNative.getAndroid();
+        console.log(temp);
+        alert(temp);
+    }
+
+</script>
+
+<ul class="entry">
+    <li>
+        Toast 提示<br/>
+        代码：<br/>
+        <div>
+            AndroidNative.hello();
+        </div>
+        <button onclick="callHello()">测试调用 Native hello()</button>
+    </li>
+
+    <br/>
+    <li>
+        Toast 提示,包含参数<br/>
+        代码：<br/>
+        <div>
+            AndroidNative.hello('hello Android');
+        </div>
+        <button onclick="callHello1()">测试调用 Native hello("hello")</button>
+    </li>
+    <br/>
+    <li>
+        获取 Android 返回值<br/>
+        代码：<br/>
+        <div>
+            AndroidNative.getAndroid();
+        </div>
+        <button onclick="callAndroid()">测试调用 getAndroid() 返回 String </button>
+    </li>
+
+</ul>
+
+</body>
+</html>
