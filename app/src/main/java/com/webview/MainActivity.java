@@ -51,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     private void initWebSettings() {
         WebSettings webSettings = mWebView.getSettings();
         if (webSettings == null) return;
+        //设置字体缩放倍数，默认100
+        webSettings.setTextZoom(100);
         // 支持 Js 使用
         webSettings.setJavaScriptEnabled(true);
         // 开启DOM缓存
