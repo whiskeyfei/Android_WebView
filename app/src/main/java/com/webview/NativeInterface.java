@@ -29,4 +29,11 @@ public class NativeInterface {
         return "Android data";
     }
 
+    @JavascriptInterface
+    public String getAndroidTime() {
+        return String.valueOf(System.currentTimeMillis());
+    }
+
+
+
 }

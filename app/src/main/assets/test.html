@@ -53,6 +53,16 @@
         alert(temp);
     }
 
+    function callAndroidTime(){
+        var temp = AndroidNative.getAndroidTime();
+        var jsendtTime = (new Date()).valueOf();
+        var pageTime = jsendtTime - temp;
+
+        console.log("temp:" +temp);
+        console.log("jsendtTime:" +jsendtTime);
+        console.log("pageTime:" +pageTime);
+    }
+
 </script>
 
 <ul class="entry">
@@ -82,6 +92,14 @@
             AndroidNative.getAndroid();
         </div>
         <button onclick="callAndroid()">测试调用 getAndroid() 返回 String </button>
+    </li>
+    <li>
+        Android Js 方法调用时间差<br/>
+        代码：<br/>
+        <div>
+            AndroidNative.getAndroidTime();
+        </div>
+        <button onclick="callAndroidTime()">测试调用 getAndroidTime() 返回 String </button>
     </li>
 
 </ul>
